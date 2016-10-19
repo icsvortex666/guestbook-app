@@ -1,0 +1,19 @@
+{
+  "name": "guestbook-app",
+  "version": "1.0.0",
+  "description": "A React/Express Guestbook web application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icsvortex666/guestbook-app.git"
+  },
+  "author": "Amit Feldman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icsvortex666/guestbook-app/issues"
+  },
+  "homepage": "https://github.com/icsvortex666/guestbook-app#readme"
+}

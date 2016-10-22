@@ -22,16 +22,6 @@ class CommentDAO {
     .one(sql.create, [author, body])
     .then((row) => new Comment(row));
   }
-
-  static update({ author, body }) {
-    return db
-    .one(sql.update, [author, body])
-    .then((row) => new Comment(row));
-  }
-
-  static delete(id) {
-    return db.none(sql.delete, [id]);
-  }
 }
 
 module.exports = CommentDAO;

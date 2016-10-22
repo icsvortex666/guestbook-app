@@ -25,24 +25,6 @@ class CommentController {
       res.status(200).json(comment);
     });
   }
-
-  static updateComment(req, res) {
-    const commentData = req.body;
-
-    CommentDAO.update(commentData)
-    .then((comment) => {
-      res.status(200).json(comment);
-    });
-  }
-
-  static deleteComment(req, res) {
-    const id = req.params.id;
-
-    CommentDAO.delete(id)
-    .then(() => {
-      res.status(204).send();
-    });
-  }
 }
 
 module.exports = CommentController;

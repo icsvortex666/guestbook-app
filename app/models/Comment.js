@@ -3,12 +3,12 @@ class Comment {
     id,
     author,
     body,
-    createdAt,
+    createdat,
   }) {
     this.id = id;
     this.author = author;
     this.body = body;
-    this.created_at = createdAt;
+    this.createdat = createdat;
   }
 }
 

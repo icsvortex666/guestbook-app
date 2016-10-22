@@ -1,6 +1,6 @@
 const CommentDAO = require('../services/CommentDAO');
 
-class CommentsController {
+class CommentController {
   static getAll(req, res) {
     CommentDAO.all()
     .then((comments) => {
@@ -45,4 +45,4 @@ class CommentsController {
   }
 }
 
-module.exports = CommentsController;
+module.exports = CommentController;

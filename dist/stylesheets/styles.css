@@ -1,3 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 body {
-  background-color: lightblue;
+  background-color: #fbfcfc;
+  padding-top: 25px;
+  font-family: monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 544px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 940px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*="col-"] {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+
+.col-1 { width: 8.33333333%; }
+.col-2 { width: 16.66666667%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33333333%; }
+.col-5 { width: 41.66666667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33333333%; }
+.col-8 { width: 66.66666667%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33333333%; }
+.col-11 { width: 91.66666667%; }
+.col-12 { width: 100%; }
+
+.well {
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 850px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+}
+
+.page-header {
+  color: #2c3e50;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 15px;
+}
+
+.page-header > h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+.well:before, .well:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.well:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.well:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+
+.message {
+  line-height: 25px;
+  color: #2c3e50;
+  padding: 15px 0 30px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.message > blockquote {
+  border-left: 5px solid lightgray;
+  padding-left: 15px;
+  margin: 0;
+}
+
+.message > blockquote > small.text-muted {
+  color: #aaaaaa;
+}
+
+.pull-right {
+  float: right;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  resize: vertical;
+}
+
+textarea {
+  height: 110px !important;
+}
+
+.form-control:focus {
+  border-color: #2c3e50;
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn {
+  font-family: "Helvetica", sans-serif;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.btn-default {
+  background-color: #ecf0f1;
+  border: 1px solid #ecf0f1;
+  color: #000000;
+}
+
+.btn.btn-default:hover {
+  background-color: #bdc3c7;
+  border: 1px solid #bdc3c7;
+}
+
+.form-group {
+  text-align: center;;
+}
+
+.btn.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+
+.btn.btn-block {
+  display: block;
+  width: 100%;
+}
+
++ .btn.btn-block.btn-block {
+  margin-top: 5px;
+}
+
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+  width: 100%;
+}
+
+.name {
+  margin-bottom: 15px;
 }

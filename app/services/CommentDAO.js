@@ -1,5 +1,5 @@
 const db = require('../config/db');
-const sql = require('../config/sqlProvider').Comments;
+const sql = require('../config/sqlProvider').comments;
 const Comment = require('../models/Comment');
 
 class CommentDAO {
@@ -21,16 +21,6 @@ class CommentDAO {
     return db
     .one(sql.create, [author, body])
     .then((row) => new Comment(row));
-  }
-
-  static update({ author, body }) {
-    return db
-    .one(sql.update, [author, body])
-    .then((row) => new Comment(row));
-  }
-
-  static delete(id) {
-    return db.none(sql.delete, [id]);
   }
 }
 

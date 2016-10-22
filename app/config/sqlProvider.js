@@ -12,8 +12,6 @@ const sqlProvider = {
     all: sql('./sql/comment/all.sql'),
     find: sql('./sql/comment/find.sql'),
     create: sql('./sql/comment/create.sql'),
-    update: sql('./sql/comment/update.sql'),
-    delete: sql('./sql/comment/delete.sql'),
   },
 };
 

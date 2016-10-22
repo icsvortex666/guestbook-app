@@ -1,0 +1,37 @@
+const db = require('../config/db');
+const sql = require('../config/sqlProvider').Comments;
+const Comment = require('../models/Comment');
+
+class CommentDAO {
+  static all() {
+    return db
+    .map(sql.all, [], (row) => new Comment(row));
+  }
+
+  static findBy(keyValue) {
+    const key = Object.keys(keyValue)[0];
+    const value = keyValue[key];
+
+    return db
+    .one(sql.find, [key, value])
+    .then((row) => new Comment(row));
+  }
+
+  static create({ author, body }) {
+    return db
+    .one(sql.create, [author, body])
+    .then((row) => new Comment(row));
+  }
+
+  static update({ author, body }) {
+    return db
+    .one(sql.update, [author, body])
+    .then((row) => new Comment(row));
+  }
+
+  static delete(id) {
+    return db.none(sql.delete, [id]);
+  }
+}
+
+module.exports = CommentDAO;
